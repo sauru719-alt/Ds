@@ -59,4 +59,89 @@ section{padding:76px 20px;max-width:920px;margin:auto;text-align:center}.eyebrow
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+.letter-section {
+  padding: 65px 18px;
+  text-align: center;
+  color: #f8dce8;
+}
+
+.letter-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+}
+
+.envelope-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f5dce5;
+  font-size: 75px;
+  padding: 15px;
+}
+
+.envelope-hint {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+}
+
+.vintage-paper {
+  display: none;
+  max-width: 540px;
+  margin: 25px auto;
+  padding: 28px 23px;
+  background: #f3e4c8;
+  color: #603b32;
+  border: 5px double #b99b70;
+  border-radius: 4px;
+  box-shadow: 0 8px 28px #0008;
+  text-align: left;
+}
+
+.vintage-paper.open {
+  display: block;
+  animation: unfold .9s ease;
+}
+
+.vintage-paper h3 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
+}
+
+.vintage-paper p {
+  font-family: 'Caveat', cursive;
+  font-size: 23px;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+@keyframes unfold {
+  from { opacity: 0; transform: scaleY(.2); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+</style>
+
+<section class="letter-section">
+  <h2>A little something for you 💌</h2>
+  <p class="envelope-hint">There's something I've been wanting to tell you...</p>
+
+  <button class="envelope-button"
+    onclick="document.getElementById('myLetter').classList.toggle('open'); this.innerHTML = this.innerHTML.includes('💌') ? '💗' : '💌';">
+    💌
+  </button>
+
+  <p class="envelope-hint">Tap to open your letter</p>
+
+  <div class="vintage-paper" id="myLetter">
+    <h3>Ms. Devnanda ❤️</h3>
+
+    <p>Ms. Devnanda.. My dear Devuu.. Innathe divsm nink vendi valare special aan but its more special to me.. Ik nammal sett aayt just 2 months mathre aaytuu.. But ee cheriya time il tanne njn manslakii i cant live without u.. Ella divsum ravila enikkumboyum rathri orngumboyum i just think abt u.. I just cant stop thinking abt u.. Namma valare different people aan nii paranje polee.. But ithra vibe match  aane aadyayt aan.. Ninte adth i have always felt comfortable and hope u also have felt.. Njn eppoyum aloikkum ann njn vilichittenkil  enth aavtti enn.. But i still believe engna poyalum namma ormmikknde aan.. Its gods plan.. Im soo lucky to meet.. Lucky to have u as a frnd.. And soo lucky to have as my girll whom im gonna marry in the future.. I never believed oralk enna ithrakkum snehikkan aavumn but u just keep proving me wrong.. There are many reasons for this to not continue but just one to keep going.. Thats u.. Thats us.. Thats everything we have bee through and everything we will go through.. Eni nthokke vannalum.. We will face it together.. I will always be with u.. Ik nink promise il onnum vishwasam illan.. But still im promising u.. I will never ever ever leave u.. Bcz i am yours completely.. A very very happy bday to u.. And i will be sending this on 12:16pm.. The exact time u were born.. I lovee uu soo much.. May god bless u</p>
+
+    <p style="text-align:right; font-size:27px;">Yours ❤️</p>
+  </div>
+</section>
 </body></html>
